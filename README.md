@@ -19,7 +19,7 @@ The scripts in this repository use the following environment variables:
 |WORKSPACE_NAME|--workspce-name|The name of the Azure ML workspace
 |SUBSCRIPTION_ID|--subscription|The Azure subscription containing the Azure ML Service
 |RESOURCE_GROUP|--resource-group|The Azure resource group containing the Azure ML Service
-|LOCATION|--location|The location in which to create any resources required by this pipeline
+|LOCATION|--location|The location where any resources will be created
 |COMPUTE_NAME|--compute-name|The name of the compute cluster used by Azure ML Service
 |VM_SIZE|--vm-size|The size of the VMs that are provisioned
 |ENVIRONMENT_NAME|--environment-name|The name of the environment utilised by the pipeline
