@@ -34,4 +34,6 @@ Once the model is trained it can be hosted by following the instructions [here](
 
 ## Next Steps
 The next steps are:
-* create a CI/CD pipeline that will automate 
+* create a CI/CD pipeline that will automate model training when code is changed
+* create an Azure ML Service deployment for the model rather than a Flask app
+* ensure CORS is handled correctly by Azure ML Service deployment
