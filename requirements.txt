@@ -47,6 +47,7 @@ flake8==3.8.4
 Flask==1.1.2
 Flask-RESTful==0.3.8
 fusepy==3.0.1
+gunicorn==20.0.4
 idna==2.10
 importlib-metadata==3.4.0
 iniconfig==1.1.1

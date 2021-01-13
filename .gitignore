@@ -55,3 +55,6 @@ venv/
 
 # Spark
 spark-warehouse/
+
+# R data files
+*.rds
