@@ -2,7 +2,6 @@ from azureml.core import Workspace, Model, Environment
 from azureml.core.model import InferenceConfig
 from azureml.core.webservice.aci import AciWebservice
 
-import datetime
 import argparse
 import os
 
@@ -50,16 +49,10 @@ def main(args):
         overwrite=True,
     )
 
-    start = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    print(f"Starting deployment {start}")
-    try:
-        webservice.wait_for_deployment(
-            show_output=True, timeout_sec=args.deploy_timeout
-        )
-    except Exception as e:
-        print(f"Error deploying: {str(e)}")
-    end = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    print(f"Deployment finished {end}")
+    webservice.wait_for_deployment(
+        show_output=True, timeout_sec=args.deploy_timeout
+    )
+    print(f"URI: {webservice.scoring_uri}")
 
 
 if __name__ == "__main__":
