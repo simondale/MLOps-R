@@ -14,14 +14,15 @@ ensures they are loaded into the base Docker container.
 The pipeline uses the `mcr.microsoft.com/mlops/python:latest` container which includes both
 Python and R runtimes.
 
-## server.py
+## server.py
+
 The server implements two methods:
 * init
 * run
 
 These are called by the Azure ML Service host and are detailed below:
 
-### init
+### init
 
 The `init()` method is called when the container starts and is responsible for loading the 
 model and any other setup required. Since this is an R model, the packages that is requires
