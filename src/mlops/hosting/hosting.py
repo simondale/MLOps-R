@@ -30,7 +30,6 @@ def predict() -> Response:
     body = request.get_data()
     pdf = pd.read_json(body, orient="split")
 
-    # put model code here
     python_columns = [
         "sepal_length",
         "sepal_width",

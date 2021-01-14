@@ -8,6 +8,12 @@ import argparse
 import os
 
 
+def add_arg(parser, name, type, env_var, default=None):
+    parser.add_argument(
+        name, type=type, default=os.environ.get(env_var, default)
+    )
+
+
 def main(args: argparse.Namespace):
     ws = Workspace.create(
         name=args.workspace_name,
@@ -81,12 +87,6 @@ def main(args: argparse.Namespace):
 
     if pipeline_run.get_status() == "Finished":
         pass
-
-
-def add_arg(parser, name, type, env_var, default=None):
-    parser.add_argument(
-        name, type=type, default=os.environ.get(env_var, default)
-    )
 
 
 if __name__ == "__main__":

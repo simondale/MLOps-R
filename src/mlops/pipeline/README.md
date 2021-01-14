@@ -16,7 +16,12 @@ To install the requirements, run the following command:
 pip install -r requirements.txt
 ```
 
-## Running the Script
+## Training the Model
 ```
 python src/mlops/pipeline/training.py
+```
+
+## Deploying the Model
+```
+python src/mlops/pipeline/deploy.py
 ```

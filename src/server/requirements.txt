@@ -1,0 +1,7 @@
+rpy2==3.4.2
+azureml-sdk==1.20.0
+azureml-contrib-services==1.20.0
+azureml-defaults==1.20.0
+pandas
+inference_schema==1.1.0
+wrapt==1.11.1
